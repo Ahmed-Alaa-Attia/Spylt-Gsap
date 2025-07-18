@@ -34,11 +34,27 @@ const HeroSection = () => {
         },
         "-=0.5"
       );
+
+    const heroTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero-container",
+        start: "1% top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    heroTl.to(".hero-container", {
+      yPercent: 30,
+      scale: 0.8,
+      rotate: 10,
+      ease: "power1.inOut",
+    });
   });
 
   return (
     <section className="bg-main-bg">
-      <div className="hero-container">
+      <div className="hero-container overflow-hidden">
         <img
           src="/images/static-img.png"
           alt="static-img"
