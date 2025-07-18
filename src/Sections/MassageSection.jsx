@@ -31,7 +31,7 @@ const MassageSection = () => {
       scrollTrigger: {
         trigger: ".message-content",
         start: "78% bottom",
-        end: "105% bottom",
+        end: "120% bottom",
         scrub: true,
       },
     });
