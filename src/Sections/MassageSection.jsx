@@ -40,7 +40,8 @@ const MassageSection = () => {
       scrollTrigger: {
         trigger: ".message-content",
         start: "73% bottom",
-        toggleActions: "play none none reset",
+        end: "90% bottom",
+        scrub: true,
       },
     });
 

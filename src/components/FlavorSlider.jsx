@@ -19,7 +19,7 @@ const FlavorSlider = () => {
     });
 
     tl.to(".flavor-section", {
-      x: `-${scrollAmout}px`,
+      x: `-${scrollAmout + 1500}px`,
     });
   });
 

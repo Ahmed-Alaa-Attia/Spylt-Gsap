@@ -5,6 +5,7 @@ import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import MassageSection from "./Sections/MassageSection";
 import { useGSAP } from "@gsap/react";
 import FlavorSection from "./Sections/FlavorSection";
+import NutritionSection from "./Sections/NutritionSection";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -15,7 +16,7 @@ const App = () => {
     ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 3,
+      smooth: 2,
       effects: true,
     });
   });
@@ -28,6 +29,7 @@ const App = () => {
           <HeroSection />
           <MassageSection />
           <FlavorSection />
+          <NutritionSection />
           <div className="h-dvh overflow-hidden z-50" />
         </div>
       </div>

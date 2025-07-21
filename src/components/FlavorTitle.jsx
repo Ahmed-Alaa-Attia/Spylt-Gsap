@@ -18,7 +18,7 @@ const FlavorTitle = () => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: ".flavor-section",
-        start: "50% bottom",
+        start: "top 30%",
       },
     });
 
@@ -27,7 +27,7 @@ const FlavorTitle = () => {
       clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
       scrollTrigger: {
         trigger: ".flavor-section",
-        start: "67% bottom",
+        start: "top 10%",
       },
     });
 
@@ -38,9 +38,38 @@ const FlavorTitle = () => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: ".flavor-section",
-        start: "85% bottom",
+        start: "top 1%",
       },
     });
+
+    const titleTl = gsap.timeline({
+      scrollTrigger: ".flavor-section",
+      start: "top top",
+      end: "bottom 80%",
+      scrub: true,
+    });
+
+    titleTl
+      .to(".first-text-split", {
+        yPercent: -33,
+        ease: "power1.inOut",
+      })
+      .to(
+        ".flavor-text-scroll",
+        {
+          yPercent: -22,
+          ease: "power1.inOut",
+        },
+        "<"
+      )
+      .to(
+        ".second-text-split",
+        {
+          yPercent: -10,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
   });
   return (
     <div className="general-title col-center h-full 2xl:gap-32 xl:gap-24 gap-16">
