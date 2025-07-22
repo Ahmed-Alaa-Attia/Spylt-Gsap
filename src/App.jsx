@@ -8,6 +8,7 @@ import FlavorSection from "./Sections/FlavorSection";
 import NutritionSection from "./Sections/NutritionSection";
 import BenifitsSection from "./Sections/BenifitsSection";
 import TestimonialSection from "./Sections/TestimonialSection";
+import FooterSection from "./Sections/FooterSection";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -18,7 +19,7 @@ const App = () => {
     ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 2.5,
+      smooth: 3,
       effects: true,
     });
   });
@@ -36,7 +37,8 @@ const App = () => {
             <BenifitsSection />
             <TestimonialSection />
           </div>
-          <div className="h-dvh overflow-hidden z-50" />
+
+          <FooterSection />
         </div>
       </div>
     </main>
