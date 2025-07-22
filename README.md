@@ -2,7 +2,7 @@
 
 _Unleash Dynamic Creativity with Seamless Motion_
 
-![Preview](public/images/screenshot.png)
+![Preview](public/images/headshot.png)
 
 > **Last Commit:** July 22, 2025  
 > **Languages:** JavaScript (78.2%)  
