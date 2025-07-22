@@ -2,11 +2,17 @@ import { useGSAP } from "@gsap/react";
 import { flavorlists } from "../constants";
 import gsap from "gsap/all";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const FlavorSlider = () => {
   const sliderRed = useRef();
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1024px)",
+  });
   useGSAP(() => {
     const scrollAmout = sliderRed.current.scrollWidth - window.innerWidth;
+
+    if (isTablet) return; // Skip animation for tablets and smaller screens
 
     const tl = gsap.timeline({
       scrollTrigger: {
